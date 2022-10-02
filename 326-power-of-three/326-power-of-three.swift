@@ -5,13 +5,10 @@ class Solution {
         
         var n = n
         
-        while n > 2 {
-            guard n % 3 == 0 else { return false }
+        while n % 3 == 0 {
             n /= 3
         }
         
-        if n == 2 { return false }
-        
-        return true
+        return n == 1
     }
 }
