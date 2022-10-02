@@ -1,7 +1,6 @@
 class Solution {
     func isPowerOfThree(_ n: Int) -> Bool {
         guard n > 0 else { return false }
-        guard n != 1 else { return true }
         
         var n = n
         
