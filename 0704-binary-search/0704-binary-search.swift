@@ -9,11 +9,3 @@ class Solution {
         return -1
     }
 }
-
-//    idx, value
-// mid = 2, 3
-
-// 9 > 3
-// left = 3 , 5
-
-// 5 - 
