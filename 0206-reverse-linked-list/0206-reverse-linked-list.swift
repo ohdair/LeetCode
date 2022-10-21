@@ -11,22 +11,13 @@
 
 class Solution {
     func reverseList(_ head: ListNode?) -> ListNode? {
-        var current = head
-        var head = ListNode()
-        var data: [Int] = []
-        while current != nil {
-            if let val = current?.val {
-                data.append(val)
-            }
-            current = current?.next 
-        }
-
-        while !data.isEmpty {
-            current = ListNode(data.removeFirst())
-            current?.next = head.next
-            head.next = current
-        }
-        
-        return head.next
+        return reversion(head, nil)
+    }
+    
+    func reversion(_ current: ListNode?, _ previous: ListNode?) -> ListNode? {
+        guard let current = current else { return previous }
+        let next = current.next
+        current.next = previous
+        return reversion(next, current)
     }
 }
